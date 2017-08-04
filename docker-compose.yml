@@ -5,7 +5,7 @@ services:
     image: mysql
   environment:
     MYSQL_ROOT_PASSWORD: qwertier
-  volume:
+  volumes:
     - ./moztrap/mysql_data:/var/lib/mysql
 
   moztrap:
