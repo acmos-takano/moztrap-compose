@@ -23,5 +23,4 @@ if [ -z "$MOZ_SKIP_DB_CHECK" ]; then
   fi
 fi
 
-
 exec "$@"
