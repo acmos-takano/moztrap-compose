@@ -1,7 +1,8 @@
 import os, sys, MySQLdb
 
 DB_NAME = "moztrap"
-DB_HOST = os.getenv("MYSQL_PORT_3306_TCP_ADDR",mysql)
+#DB_HOST = os.getenv("MYSQL_PORT_3306_TCP_ADDR",mysql)
+DB_HOST = os.getenv("MYSQL_HOST","")
 DB_USER = os.getenv("MYSQL_DB_USER","root")
 DB_PASS = os.getenv("MYSQL_ENV_MYSQL_PASS","000000")
 

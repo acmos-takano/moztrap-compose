@@ -17,6 +17,7 @@ services:
       - mysql
     environment:
       MYSQL_ENV_MYSQL_PASS: qwertier
+      MYSQL_HOST: mysql
       DEFAULT_FROM_EMAIL: 'from@localhost'
       EMAIL_HOST: 127.0.0.1
       EMAIL_PORT: 25
