@@ -1,4 +1,3 @@
-# MozTrap用local.py。元ファイルからメール周りを環境変数化
 from os import environ
 
 DATABASES = {

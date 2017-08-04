@@ -14,12 +14,11 @@ try:
   cur= con.cursor()
   cur.execute("select * from information_schema.tables where table_name=%s", ('django_admin_log',))
   exists = bool(cur.rowcount)
+  cur.close()
+  con.close()
   if exists is False:
       print("Table does not appear to be setup.")
       sys.exit(2)
 except Exception as e:
     print("Database does not appear to be setup.")
     sys.exit(2)
-finally:
-    cur.close()
-    con.close()
