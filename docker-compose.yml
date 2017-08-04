@@ -12,7 +12,7 @@ services:
     build: ./moztrap
 #    image:lemonlatte/docker-moztrap
     ports:
-      -8000:8000
+      - 8000:8000
     depends_on:
       - mysql
     environment:
