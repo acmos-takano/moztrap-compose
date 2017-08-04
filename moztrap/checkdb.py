@@ -1,7 +1,5 @@
-# moztrap用初期DB構築判定
 import os, sys, MySQLdb
 
-# 接続設定はコンテナ起動時の外部変数を想定
 DB_NAME = "moztrap"
 DB_HOST = os.getenv("MYSQL_PORT_3306_TCP_ADDR","")
 DB_USER = os.getenv("MYSQL_DB_USER","root")
@@ -13,7 +11,6 @@ print("Connecting to database:\n" + conn_string)
 con = MySQLdb.connect( user=DB_USER, passwd=DB_PASS, host=DB_HOST, db=DB_NAME)
 cur= con.cursor()
 
-# サーチ先がこれでいいかは確認
 cur.execute("select * from information_schema.tables where table_name=%s", ('django_admin_log',))
 exists = bool(cur.rowcount)
 
