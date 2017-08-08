@@ -26,5 +26,5 @@ services:
       EMAIL_PORT: 25001
 #      EMAIL_HOST_USER: 'please set smtpauth-user'
 #      EMAIL_HOST_PASSWORD: 'please set smtpauth-password'
-      EMAIL_USE_TLS: 'False'
+#      EMAIL_USE_TLS: 'True'
       MOZ_SLEEP: 10

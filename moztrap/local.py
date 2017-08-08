@@ -21,6 +21,7 @@ CACHES = {
     }
 }
 
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 DEFAULT_FROM_EMAIL = environ.get("DEFAULT_FROM_EMAIL","localhost")
 EMAIL_HOST = environ.get("EMAIL_HOST","localhost")
 EMAIL_PORT = environ.get("EMAIL_PORT",25)
