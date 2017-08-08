@@ -3,6 +3,8 @@ version: '2'
 services:
   db:
     image: mysql
+    ports:
+      - 3306
     environment:
       MYSQL_ROOT_PASSWORD: qwertier
     volumes:
@@ -12,16 +14,17 @@ services:
     build: ./moztrap
 #    image:lemonlatte/docker-moztrap
     ports:
-      - 8000:8000
+      - 8011:8000
     depends_on:
       - db
     environment:
       MYSQL_ENV_MYSQL_PASS: qwertier
       MYSQL_HOST: db
-      DEFAULT_FROM_EMAIL: 'from@localhost'
-      EMAIL_HOST: 127.0.0.1
-      EMAIL_PORT: 25
-#     EMAIL_HOST_USER: 'please set smtpauth-user'
+      DB_PORT: 3306
+      DEFAULT_FROM_EMAIL: 'from@example.com'
+      EMAIL_HOST: localhost
+      EMAIL_PORT: 25001
+#      EMAIL_HOST_USER: 'please set smtpauth-user'
 #      EMAIL_HOST_PASSWORD: 'please set smtpauth-password'
       EMAIL_USE_TLS: 'False'
-      MOZ_SLEEP: 20
+      MOZ_SLEEP: 10
