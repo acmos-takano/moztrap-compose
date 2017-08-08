@@ -21,7 +21,7 @@ CACHES = {
     }
 }
 
-DEFAULT_FROM_EMAIL = environ.get("EMAIL_FROM","localhost")
+DEFAULT_FROM_EMAIL = environ.get("DEFAULT_FROM_EMAIL","localhost")
 EMAIL_HOST = environ.get("EMAIL_HOST","localhost")
 EMAIL_PORT = environ.get("EMAIL_PORT",25)
 EMAIL_HOST_USER = environ.get("EMAIL_HOST_USER","")
