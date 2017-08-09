@@ -18,6 +18,7 @@ services:
     depends_on:
       - db
     environment:
+      SITE_URL: "http://aaa.example.com"
       MYSQL_ENV_MYSQL_PASS: qwertier
       MYSQL_HOST: db
       DB_PORT: 3306
