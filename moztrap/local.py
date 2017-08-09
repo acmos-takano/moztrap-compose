@@ -1,5 +1,7 @@
 from os import environ
 
+SITE_URL = environ.get("SITE_URL","localhost:8000")
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
